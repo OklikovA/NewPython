@@ -4,7 +4,11 @@
 def draw_box(h, w):
     print('*' * w)
     for i in range(h):
-        print('*' + ' ' * (h - 2) + '*')
+        if h <= 2:
+            continue
+        else:
+            print('*' + ' ' * (h - 2) + '*')
     print('*' * w)
 h, w =map(int, input('Введи высоту и ширину: ').split())
+#h, w = 2, 2
 draw_box(h, w)
