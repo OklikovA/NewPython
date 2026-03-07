@@ -1,8 +1,12 @@
 #Напишите функцию draw_triangle(), которая выводит звёздный прямоугольный треугольник с катетами, равными 10
+#Переписать функцию draw_triangle(), которая выводит звёздный равносторонний треугольник с катетами
 
-def draw_triangle():
-    for i in range(1, n + 1):
+
+def draw_triangle(n):
+    for i in range(1, (n + 1) // 2 + 1):
+        print('*' * i)
+    for i in range((n + 1) // 2 - 1, 0, -1):
         print('*' * i)
 
 n = 10
-draw_triangle()
+draw_triangle(n)
