@@ -2,11 +2,13 @@
 #Переписать функцию draw_triangle(), которая выводит звёздный равносторонний треугольник с катетами
 
 
-def draw_triangle(n):
+def draw_triangle(n, simvol):
     for i in range(1, (n + 1) // 2 + 1):
-        print('*' * i)
+        print(simvol * i)
     for i in range((n + 1) // 2 - 1, 0, -1):
-        print('*' * i)
+        print(simvol * i)
 
-n = 10
-draw_triangle(n)
+n = 13
+simvol = '#'
+
+draw_triangle(n, simvol)
