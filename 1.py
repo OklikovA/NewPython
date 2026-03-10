@@ -2,13 +2,17 @@
 #2.Изменить функцию, что бы можно было самостоятельно задавать размеры квадратика, который рисуется.
 
 def draw_box(h, w):
-    print('*' * w)
-    for i in range(h):
-        if h <= 2:
-            continue
-        else:
-            print('*' + ' ' * (h - 2) + '*')
-    print('*' * w)
-h, w =map(int, input('Введи высоту и ширину: ').split())
-#h, w = 2, 2
+    if h <= 0 or w <= 0:
+        print("Ошибка!")
+
+    if h == 1:
+        print('*' * w)
+
+    for i in range(h - 2):
+        print('*' + ' ' * (w - 2) + '*')
+
+    if h > 1:
+        print('*' * w)
+#h, w =map(int, input('Введи высоту и ширину: ').split())
+h, w = 1, 15
 draw_box(h, w)
